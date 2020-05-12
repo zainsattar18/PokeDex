@@ -6,23 +6,33 @@
 }
 
 #searchbox{
+  
+  width: 50%;
   border-radius: 15px;
   border: 1px solid black;
   background-color: rgba(243, 7, 7, 0.9);
   padding: 7px;
   margin-bottom: 10px;
+  box-shadow: 8px 8px rgba(192, 205, 236, 0.9);
 }
 
 #bottom{
   display: flex;
   border-radius: 15px;
-  border-left: 45px solid red;
-  border-right: 45px solid red;
-  border-top: 10px solid red;
-  border-bottom: 10px solid red;
-  padding: 75px;
+  border-left: 30px solid red;
+  border-right: 30px solid red;
+  border-top: 5px solid red;
+  border-bottom: 5px solid red;
+  padding: 50px;
   background-color: rgb(255, 255, 255);
-  margin-top: 5px;
+  box-shadow: inset 0 0 10px #000000;
+}
+
+#double-border{
+  border: 5px solid black;
+  border-radius: 25px;
+  margin-top: 10px;
+  box-shadow: 10px 10px rgba(192, 205, 236, 0.9) ;
 }
 
 #namebar{
@@ -47,10 +57,12 @@
   padding: 15px;
   border: 3px solid black;
   margin: 3px solid black;
+  width: 35%;
+  box-shadow: 8px 8px rgba(192, 205, 236, 0.9);
 }
 
-.pokesearch{
-  text-align: right;
+#pokesearch{
+  
 }
 
 span{
@@ -62,3 +74,19 @@ span{
 body{
   background-image: url("http://www.allwhitebackground.com/images/7/Grid-Background-Free-Picture.png");
 }
+
+#pokeimage{
+  width: 30%;
+  padding: 25px;
+  display: flex;
+  border: 25px;
+  justify-content: flex-start;
+  /* margin-left: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: #E8E8E8;  */
+}
+
+/* img{
+  
+} */

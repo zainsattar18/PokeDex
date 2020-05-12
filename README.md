@@ -10,7 +10,7 @@ I am creating a Pokedex (Pokemon Index) which will allow the user to search for 
 
 ## API and Data Sample
 
-https://pokeapi.co/api/v2/pokemon?limit=150
+https://pokeapi.co/api/v2/pokemon
 
 {
 count: 964,
