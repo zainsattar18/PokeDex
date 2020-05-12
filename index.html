@@ -6,14 +6,29 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script defer src="./app.js"></script>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
   <title>PokeDex Neptune</title>
 </head>
 <body>
+  <div id = info><span>Info</span></div>
 
-  <input type="text" name="Pokemon" id="pokesearch" placeholder="Ex: Pikachu or #25">
-  <button type="search" id='search'>Search</button>
+  <div id = searchbox>
+  <input type="text" id="pokesearch" placeholder="Ex: Pikachu or #25">
+  <button type="submit" id='search'>PokeDex</button>
+  <div id="namebar"></div>
+  </div>
+
+  <img id = pokeimage>
+
+  <div class = "info">
+  <div id="height">HT:</div>
+  <div id="weight">WT:</div>
+  </div>
+
+  <section class="pokemon-list"></section>
   
-<section class="pokemon-list"></section>
+  <div id = bottom>Additional Information</div>
+
 
 </body>
 <footer></footer>
