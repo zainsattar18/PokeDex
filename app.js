@@ -30,18 +30,30 @@ function getPokemonData(pokemon) {
   
   let height = document.querySelector('#height')
   const heightDiv = document.createElement('div')
-  heightDiv.innerHTML = `HT: ${pokemon.height}'` 
+  heightDiv.innerHTML = `HT: ${pokemon.height}'`
   height.append(heightDiv)
   
   let weight = document.querySelector('#weight')
   const weightDiv = document.createElement('div')
   weightDiv.innerHTML = `WT: ${pokemon.weight}lbs`
-  weight.append(weightDiv) 
+  weight.append(weightDiv)
 
   let image = document.querySelector('#pokeimage')
-  image.setAttribute('src',pokemon.sprites.front_default)
-  image.append(image)
+  image.setAttribute('src', pokemon.sprites.front_default)
   
+  let type = document.querySelector('#type')
+  const typeDiv = document.createElement('div')
+  typeDiv.innerHTML = pokemon.types[0].type.name
+  type.append(typeDiv)
+
+  let typeTwo = document.querySelector('#type2')
+  const typeTwoDiv = document.createElement('div')
+  typeTwoDiv.innerHTML = pokemon.types[1].type.name
+  typeTwo.append(typeTwoDiv)
+
+  // let info = document.querySelector('#bottom')
+  // const infoDiv = document.createElement('div')
+  // infoDiv.innerHTML = pokemon.species.url.flavor_text_entries
 }
 
 function removePoke() {
@@ -49,6 +61,8 @@ function removePoke() {
   const oldHeight = document.querySelector('#height')
   const oldWeight = document.querySelector('#weight')
   const oldPhoto = document.querySelector('#pokeimage')
+  const oldType = document.querySelector('#type')
+  const oldTypeTwo = document.querySelector('#type2')
   
   while (oldHeight.lastChild) {
   oldHeight.removeChild(oldHeight.lastChild)
@@ -64,6 +78,13 @@ function removePoke() {
 
   while (oldPhoto.lastChild) {
     oldPhoto.removeChild(oldPhoto.lastChild)
+  }
+
+  while (oldType.lastChild) {
+    oldType.removeChild(oldType.lastChild)
+  }
+  while (oldTypeTwo.lastChild) {
+    oldTypeTwo.removeChild(oldTypeTwo.lastChild)
   }
 }
 

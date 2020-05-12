@@ -5,19 +5,70 @@
   margin-bottom: 15px;
 }
 
+#alignright{
+  display: flexbox;
+  justify-content: space-between;
+  position: absolute;
+  right:5%; 
+}
+
+
+
 #searchbox{
   
-  width: 50%;
+  width: 90%;
   border-radius: 15px;
   border: 1px solid black;
   background-color: rgba(243, 7, 7, 0.9);
   padding: 7px;
   margin-bottom: 10px;
   box-shadow: 8px 8px rgba(192, 205, 236, 0.9);
+  
 }
 
-#bottom{
+.info{
+  justify-content: right;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  padding: 15px;
+  border: 3px solid black;
+  margin: 3px solid black;
+  width: 65%;
+  box-shadow: 8px 8px rgba(192, 205, 236, 0.9);
+}
+
+#type{
+  border-radius: 10px;
+  background-color: rgba(95, 129, 206, 0.9);
+  padding: 15px;
+  border:3px solid black;
+  width: 25%;
+  height: 5%;
+  margin-bottom: 15px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+#type2{
+  border-radius: 10px;
+  background-color: rgba(224, 139, 226, 0.9);
+  padding: 15px;
+  border:3px solid black;
+  width: 25%;
+  height: 10%;
+  margin-bottom: 15px;
+  color: rgb(255, 255, 255);
+  text-align: center; 
+  margin-left: 5px;
+}
+
+#both-type{
   display: flex;
+  flex-direction: row;
+}
+
+
+#bottom{
   border-radius: 15px;
   border-left: 30px solid red;
   border-right: 30px solid red;
@@ -26,6 +77,7 @@
   padding: 50px;
   background-color: rgb(255, 255, 255);
   box-shadow: inset 0 0 10px #000000;
+  
 }
 
 #double-border{
@@ -33,6 +85,11 @@
   border-radius: 25px;
   margin-top: 10px;
   box-shadow: 10px 10px rgba(192, 205, 236, 0.9) ;
+  position: absolute;
+  bottom: 3%;
+  width: 95%;
+  /* margin-bottom: 15px; */
+  
 }
 
 #namebar{
@@ -40,6 +97,7 @@
   background-color: white;
   padding: 10px;
   margin-top: 2px;
+  border-radius: 5px;
 }
 #height{
   border-bottom: 3px dotted navy;
@@ -50,20 +108,6 @@
   padding-top: 10px;
 }
 
-.info{
-  justify-content: right;
-  border-radius: 10px;
-  background-color: rgb(255, 255, 255);
-  padding: 15px;
-  border: 3px solid black;
-  margin: 3px solid black;
-  width: 35%;
-  box-shadow: 8px 8px rgba(192, 205, 236, 0.9);
-}
-
-#pokesearch{
-  
-}
 
 span{
   color:rgb(255, 255, 255);
@@ -77,16 +121,14 @@ body{
 
 #pokeimage{
   width: 30%;
-  padding: 25px;
-  display: flex;
+  height: 30%;
+  padding: 15px;
   border: 25px;
-  justify-content: flex-start;
-  /* margin-left: 10px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  background-color: #E8E8E8;  */
+  margin-right: 0px;
+  /* flex-direction: column; */
 }
 
-/* img{
-  
-} */
+#pokesearch{
+  border-radius: 5px;
+  width:60%;
+}
