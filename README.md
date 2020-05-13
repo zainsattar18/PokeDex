@@ -63,10 +63,10 @@ https://wireframe.cc/pro/pp/5f208163a341797
 |  Day | Deliverable | Status
 |---|---| ---|
 |May 8| Project Prompt | Complete
-|May 9-10| Complete Project Worksheet & ReadMe | 
-|May 11| Create HTML Template, Starter CSS, Pseudocode | Incomplete
-|May 12| Begin Code  | Incomplete
-|May 13| Additional Code, Fuctional Website, Flexbox| Incomplete
+|May 9-10| Complete Project Worksheet & ReadMe | Complete
+|May 11| Create HTML Template, Starter CSS, Pseudocode | Complete
+|May 12| Begin Code  | Complete
+|May 13| Additional Code, Fuctional Website, Flexbox| Complete
 |May 14| Extra CSS, develop Post-MVP deliverables | Incomplete
 |May 15| Presentation | Incomplete
 
