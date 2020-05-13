@@ -1,50 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script defer src="./app.js"></script>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Anton&family=Shadows+Into+Light&display=swap" rel="stylesheet">
   <title>PokeDex Neptune</title>
 </head>
+
 <body class="body">
-  <div id = info><span>Info</span></div>
   
+  <div id='info'>
+    <div id='triangle'></div>
+    <span>Info</span>
+  </div>
+
   <div id="main">
 
-<div id ="alignright">
-  <div id = searchbox>   
-  <input type="text" id="pokesearch" placeholder="Pokemon Name">
-  <button type="submit" id='search'>PokeDex</button>
-  <div id ="namebar"></div>
+    <div id="alignright">
+      <div id=searchbox>
+        <input type="text" id="pokesearch" placeholder="Pokemon Name">
+        <button type="submit" id='search'>PokeDex</button>
+        <div id="namebar"></div>
+      </div>
+
+      <span id="both-type">
+        <div id="type"></div>
+        <div id='type2'></div>
+      </span>
+
+      <div class="info">
+        <div id="height">HT:<div id ="height_change"></div></div>
+        <div id="weight">WT:<div id ="weight_change"></div></div>
+      </div>
+    </div>
+
   </div>
-  
-  <span id="both-type">
-  <div id ="type"></div>
-  <div id ='type2'></div>
-  </span>
 
-  <div class = "info">
-  <div id ="height">HT:</div>
-  <div id ="weight">WT:</div>
+  <div id="images">
+  <img src=" " id="pokeimage_two">
+  <img src=" " id='pokeimage'>
   </div>
-</div>
-
-</div>
-
-<img src=" " id='pokeimage'>
 
   <!-- <img src="" id='pokeimage'> -->
 
   <section class="pokemon-list"></section>
-  
+
   <div id="double-border">
-    <div id = 'bottom'></div>
+    <div id='bottom'>
+      
+      </div>
+    </div>
   </div>
 
 
 </body>
 <footer></footer>
+
 </html>

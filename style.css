@@ -1,8 +1,11 @@
 #info{
-  
+  height: 30px;
   background-color: rgba(243, 7, 7, 0.9);
   border-bottom: 3px solid rgba(17, 15, 15, 0.642);
   margin-bottom: 15px;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: row;
 }
 
 #alignright{
@@ -26,24 +29,35 @@
   
 }
 
+#triangle{
+  width:0;
+  height:0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid white;
+  margin-left: 5px;
+}
+
 .info{
   justify-content: right;
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
-  padding: 15px;
+  padding: 5px;
   border: 3px solid black;
   margin: 3px solid black;
   width: 65%;
   box-shadow: 8px 8px rgba(192, 205, 236, 0.9);
+  font-family: 'Anton', sans-serif;
+  
 }
 
 #type{
   border-radius: 10px;
   background-color: rgba(95, 129, 206, 0.9);
-  padding: 15px;
+  padding: 10px;
   border:3px solid black;
-  width: 25%;
-  height: 5%;
+  width: 35%;
+  height: 15%;
   margin-bottom: 15px;
   color: rgb(255, 255, 255);
   text-align: center;
@@ -52,9 +66,9 @@
 #type2{
   border-radius: 10px;
   background-color: rgba(224, 139, 226, 0.9);
-  padding: 15px;
+  padding: 10px;
   border:3px solid black;
-  width: 25%;
+  width: 35%;
   height: 10%;
   margin-bottom: 15px;
   color: rgb(255, 255, 255);
@@ -74,10 +88,16 @@
   border-right: 30px solid red;
   border-top: 5px solid red;
   border-bottom: 5px solid red;
-  padding: 50px;
+  padding: 45px;
   background-color: rgb(255, 255, 255);
   box-shadow: inset 0 0 10px #000000;
-  
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: 900;
+  font-size: 100%;
+  /* background: url("https://img.pngio.com/pokemon-ball-png-transparent-background-pokeball-png-pokeball-background-png-920_960.png")  */
+  /* no-repeat center center;   */
+  /* opacity: .2; */
+  /* background-size: 25%;   */
 }
 
 #double-border{
@@ -88,7 +108,6 @@
   position: absolute;
   bottom: 3%;
   width: 95%;
-  /* margin-bottom: 15px; */
   
 }
 
@@ -99,20 +118,34 @@
   margin-top: 2px;
   border-radius: 5px;
 }
+
 #height{
   border-bottom: 3px dotted navy;
   padding-bottom: 10px;
+  /* text-align: center; */
+  color: rgba(19, 18, 18, 1);
+  /* color: rgba(243, 7, 7, 1); */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 #weight{
   padding-top: 10px;
+  /* text-align: center; */
+  color: rgba(243, 7, 7, 1);
+  /* color: rgba(19, 18, 18, 1); */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 
 span{
   color:rgb(255, 255, 255);
   font-family: 'Russo One', sans-serif;
-  
+  padding-left: 5px;
+  font-size: 20px;
 }
 
 body{
@@ -120,19 +153,20 @@ body{
   
 }
 
-/* .body{
-  background-image: url('https://img.pngio.com/pokemon-ball-png-transparent-background-pokeball-png-pokeball-background-png-920_960.png');
-  opacity: .5;
-  z-index: -1;
-} */
 
 #pokeimage{
-  width: 30%;
-  height: 30%;
-  padding: 15px;
-  border: 25px;
+  width: 25%;
+  height: 25%;
+  padding-left: 15%;
   margin-right: 0px;
-  /* flex-direction: column; */
+}
+
+#pokeimage_two{
+  width: 15%;
+  height: 15%;
+  padding: 5px;
+  /* border: 25px; */
+  /* margin-right: 0px; */
 }
 
 #pokesearch{
@@ -140,4 +174,7 @@ body{
   width:60%;
 }
 
-
+#images{
+  display: flex;
+  flex-direction: column;
+}

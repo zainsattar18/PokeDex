@@ -2,10 +2,10 @@
 
 
 async function getData(selection) {
-  
+
   const url = `https://pokeapi.co/api/v2/pokemon/${selection.toLowerCase()}`
-  const urlData =` https://pokeapi.co/api/v2/pokemon-species/${selection.toLowerCase()}`
-  
+  const urlData = ` https://pokeapi.co/api/v2/pokemon-species/${selection.toLowerCase()}`
+
   try {
     let response = await axios.get(url)
     let responseTwo = await axios.get(urlData)
@@ -13,30 +13,17 @@ async function getData(selection) {
     // console.log(response)
     // console.log(responseTwo)
     const data = response.data // logs intial pokemon
-    const dataTwo = responseTwo.data 
+    const dataTwo = responseTwo.data
     // console.log(dataTwo)
     // console.log(data)
 
-    removePoke() 
-    getPokemonData(data) 
+    removePoke()
+    getPokemonData(data)
     getPokemonInfo(dataTwo)
   } catch (error) {
     console.log(error)
   }
 }
-
-// async function getUrlData(selection) {
-//   const urlData = ` https://pokeapi.co/api/v2/pokemon-species/${selection.toLowerCase()}`
-//   console.log(urlData)
-//   try { 
-//     let responseTwo = await axios.get (url)
-//     const newData = responseTwo.data
-    
-//   } catch (error) {
-//     console.log(error)
-//   }
-// }
-
 
 
 function getPokemonData(pokemon) {
@@ -44,20 +31,23 @@ function getPokemonData(pokemon) {
   const name = document.createElement('div')
   name.innerHTML = pokemon.name;
   pokeList.append(name);
-  
-  let height = document.querySelector('#height')
+
+  let height = document.querySelector('#height_change')
   const heightDiv = document.createElement('div')
-  heightDiv.innerHTML = `HT: ${pokemon.height}'`
+  heightDiv.innerHTML = `${pokemon.height}'`
   height.append(heightDiv)
-  
-  let weight = document.querySelector('#weight')
+
+  let weight = document.querySelector('#weight_change')
   const weightDiv = document.createElement('div')
-  weightDiv.innerHTML = `WT: ${pokemon.weight}lbs`
+  weightDiv.innerHTML = `${pokemon.weight} lbs`
   weight.append(weightDiv)
 
   let image = document.querySelector('#pokeimage')
   image.setAttribute('src', pokemon.sprites.front_default)
-  
+
+  let image_two = document.querySelector('#pokeimage_two') // new 2nd image call
+  image_two.setAttribute('src', pokemon.sprites.back_default)
+
   let type = document.querySelector('#type')
   const typeDiv = document.createElement('div')
   typeDiv.innerHTML = pokemon.types[0].type.name
@@ -65,7 +55,7 @@ function getPokemonData(pokemon) {
 
   let typeTwo = document.querySelector('#type2')
   const typeTwoDiv = document.createElement('div')
-  typeTwoDiv.innerHTML = pokemon.types[1] ? pokemon.types[1].type.name : ""; 
+  typeTwoDiv.innerHTML = pokemon.types[1] ? pokemon.types[1].type.name : "";
   typeTwo.append(typeTwoDiv)
 
 }
@@ -74,7 +64,8 @@ function getPokemonData(pokemon) {
 function getPokemonInfo(pokemon) {
   let info = document.querySelector('#bottom')
   const infoDiv = document.createElement('div')
-  infoDiv.innerHTML = pokemon.flavor_text_entries[1].flavor_text;
+  infoDiv.innerHTML = pokemon.flavor_text_entries[1].language.name === "en" ? pokemon.flavor_text_entries[1].flavor_text : pokemon.flavor_text_entries[2].flavor_text
+  // infoDiv.innerHTML = pokemon.flavor_text_entries[1].flavor_text;
   info.append(infoDiv)
 }
 
@@ -82,17 +73,18 @@ function getPokemonInfo(pokemon) {
 
 function removePoke() {
   const oldName = document.querySelector('#namebar')
-  const oldHeight = document.querySelector('#height')
-  const oldWeight = document.querySelector('#weight')
+  const oldHeight = document.querySelector('#height_change')
+  const oldWeight = document.querySelector('#weight_change')
   const oldPhoto = document.querySelector('#pokeimage')
+  const oldPhotoTwo = document.querySelector('#pokeimage_two') //new 2nd picture
   const oldType = document.querySelector('#type')
   const oldTypeTwo = document.querySelector('#type2')
   const oldInfo = document.querySelector('#bottom')
-  
+
   while (oldHeight.lastChild) {
-  oldHeight.removeChild(oldHeight.lastChild)
+    oldHeight.removeChild(oldHeight.lastChild)
   }
-  
+
   while (oldWeight.lastChild) {
     oldWeight.removeChild(oldWeight.lastChild)
   }
@@ -103,6 +95,10 @@ function removePoke() {
 
   while (oldPhoto.lastChild) {
     oldPhoto.removeChild(oldPhoto.lastChild)
+  }
+
+  while (oldPhotoTwo.lastChild) {
+    oldPhotoTwo.removeChild(oldPhotoTwo.lastChild)
   }
 
   while (oldType.lastChild) {
@@ -144,7 +140,7 @@ search.addEventListener('click', option)
 //     console.log(weightData)
 //     // console.log(data)
 //     // printData(data)
-    
+
 //   } catch (error) {
 //     console.log(error)
 //   }
