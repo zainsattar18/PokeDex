@@ -119,7 +119,7 @@ function option(e) {
   e.preventDefault()
   let getOption = document.querySelector('#pokesearch')
   let getValue = getOption.value
-  console.log(getValue)
+  // console.log(getValue)
   getData(getValue)
 }
 

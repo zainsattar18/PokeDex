@@ -185,6 +185,16 @@ body{
   flex-direction: column;
 }
 
+button{
+  width:33%;
+  text-align: center;
+  vertical-align: middle;  
+}
+
+
+
+
+
 @font-face {
   font-family: 'pocket_monkregular';
   src: url('fonts/pocketmonk-15ze-webfont.woff2') format('woff2'),
