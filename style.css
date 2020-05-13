@@ -117,7 +117,14 @@ span{
 
 body{
   background-image: url("http://www.allwhitebackground.com/images/7/Grid-Background-Free-Picture.png");
+  
 }
+
+/* .body{
+  background-image: url('https://img.pngio.com/pokemon-ball-png-transparent-background-pokeball-png-pokeball-background-png-920_960.png');
+  opacity: .5;
+  z-index: -1;
+} */
 
 #pokeimage{
   width: 30%;
@@ -132,3 +139,5 @@ body{
   border-radius: 5px;
   width:60%;
 }
+
+

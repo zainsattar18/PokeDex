@@ -4,22 +4,39 @@
 async function getData(selection) {
   
   const url = `https://pokeapi.co/api/v2/pokemon/${selection.toLowerCase()}`
+  const urlData =` https://pokeapi.co/api/v2/pokemon-species/${selection.toLowerCase()}`
   
   try {
     let response = await axios.get(url)
+    let responseTwo = await axios.get(urlData)
+
     // console.log(response)
+    // console.log(responseTwo)
     const data = response.data // logs intial pokemon
+    const dataTwo = responseTwo.data 
+    // console.log(dataTwo)
     // console.log(data)
-    removePoke() // doesnt remove all data
-    getPokemonData(data)
-    
-    // console.log(response)
-    // console.log(`line 13`)
-      
+
+    removePoke() 
+    getPokemonData(data) 
+    getPokemonInfo(dataTwo)
   } catch (error) {
     console.log(error)
   }
 }
+
+// async function getUrlData(selection) {
+//   const urlData = ` https://pokeapi.co/api/v2/pokemon-species/${selection.toLowerCase()}`
+//   console.log(urlData)
+//   try { 
+//     let responseTwo = await axios.get (url)
+//     const newData = responseTwo.data
+    
+//   } catch (error) {
+//     console.log(error)
+//   }
+// }
+
 
 
 function getPokemonData(pokemon) {
@@ -48,13 +65,20 @@ function getPokemonData(pokemon) {
 
   let typeTwo = document.querySelector('#type2')
   const typeTwoDiv = document.createElement('div')
-  typeTwoDiv.innerHTML = pokemon.types[1].type.name
+  typeTwoDiv.innerHTML = pokemon.types[1] ? pokemon.types[1].type.name : ""; 
   typeTwo.append(typeTwoDiv)
 
-  // let info = document.querySelector('#bottom')
-  // const infoDiv = document.createElement('div')
-  // infoDiv.innerHTML = pokemon.species.url.flavor_text_entries
 }
+
+
+function getPokemonInfo(pokemon) {
+  let info = document.querySelector('#bottom')
+  const infoDiv = document.createElement('div')
+  infoDiv.innerHTML = pokemon.flavor_text_entries[1].flavor_text;
+  info.append(infoDiv)
+}
+
+
 
 function removePoke() {
   const oldName = document.querySelector('#namebar')
@@ -63,6 +87,7 @@ function removePoke() {
   const oldPhoto = document.querySelector('#pokeimage')
   const oldType = document.querySelector('#type')
   const oldTypeTwo = document.querySelector('#type2')
+  const oldInfo = document.querySelector('#bottom')
   
   while (oldHeight.lastChild) {
   oldHeight.removeChild(oldHeight.lastChild)
@@ -86,6 +111,11 @@ function removePoke() {
   while (oldTypeTwo.lastChild) {
     oldTypeTwo.removeChild(oldTypeTwo.lastChild)
   }
+
+  while (oldInfo.lastChild) {
+    oldInfo.removeChild(oldInfo.lastChild)
+  }
+
 }
 
 
