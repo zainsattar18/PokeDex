@@ -94,10 +94,6 @@
   font-family: 'Shadows Into Light', cursive;
   font-weight: 900;
   font-size: 100%;
-  /* background: url("https://img.pngio.com/pokemon-ball-png-transparent-background-pokeball-png-pokeball-background-png-920_960.png")  */
-  /* no-repeat center center;   */
-  /* opacity: .2; */
-  /* background-size: 25%;   */
 }
 
 #double-border{
@@ -128,22 +124,22 @@
 #height{
   border-bottom: 3px dotted navy;
   padding-bottom: 10px;
-  /* text-align: center; */
-  color: rgba(19, 18, 18, 1);
-  /* color: rgba(243, 7, 7, 1); */
+  color: rgba(243, 7, 7, 1);
+  -webkit-text-stroke: 1px rgba(19, 18, 18, 1);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  font-size: 20px;
 }
 
 #weight{
   padding-top: 10px;
-  /* text-align: center; */
   color: rgba(243, 7, 7, 1);
-  /* color: rgba(19, 18, 18, 1); */
+  -webkit-text-stroke: 1px rgba(19, 18, 18, 1);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  font-size: 20px;
 }
 
 
@@ -155,8 +151,8 @@ span{
 }
 
 body{
-  background-image: url("http://www.allwhitebackground.com/images/7/Grid-Background-Free-Picture.png");
-  
+  background-image: url("https://s3.amazonaws.com/mk-website-media/wp-content/uploads/2018/10/19001752/Wallpaper-IngridMika-ContactGrid55-1.jpg");
+ 
 }
 
 
@@ -171,8 +167,6 @@ body{
   width: 15%;
   height: 15%;
   padding: 5px;
-  /* border: 25px; */
-  /* margin-right: 0px; */
 }
 
 #pokesearch{
