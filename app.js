@@ -34,12 +34,16 @@ function getPokemonData(pokemon) {
 
   let height = document.querySelector('#height_change')
   const heightDiv = document.createElement('div')
-  heightDiv.innerHTML = `${pokemon.height}'`
+  const heightInFeet = Math.ceil((pokemon.height * .10) * 3.28)
+  // const heightInFeet = Math.floor(heightInMeters * 3.28)
+  heightDiv.innerHTML = `${heightInFeet}'`
   height.append(heightDiv)
 
   let weight = document.querySelector('#weight_change')
   const weightDiv = document.createElement('div')
-  weightDiv.innerHTML = `${pokemon.weight} lbs`
+  const weightInKilo = pokemon.weight * .10
+  const weightInLbs = Math.floor(weightInKilo * 2.204)
+  weightDiv.innerHTML = `${weightInLbs}lbs`
   weight.append(weightDiv)
 
   let image = document.querySelector('#pokeimage')
