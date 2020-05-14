@@ -67,7 +67,7 @@ https://wireframe.cc/pro/pp/5f208163a341797
 |May 11| Create HTML Template, Starter CSS, Pseudocode | Complete
 |May 12| Begin Code  | Complete
 |May 13| Additional Code, Fuctional Website, Flexbox| Complete
-|May 14| Extra CSS, develop Post-MVP deliverables | Incomplete
+|May 14| Extra CSS, develop Post-MVP deliverables | Complete
 |May 15| Presentation | Incomplete
 
 ## Priority Matrix
@@ -76,33 +76,39 @@ Include a full list of features that have been prioritized based on the `Time an
 
 ## Timeframes
 
-| Component | Priority | Estimated Time | Time Invested | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-| HTML| M | 2hrs|  |  |
-| CSS - Basic | M | 3hrs|  | |
-| CSS - Advanced | H | 3.5 hrs | | 
-| Psuedocode| M | 2hrs|  |  |
-| Functional Coding | H | 3hrs| |  |
-| Working with API | H | 4.5hrs| | |
-| FlexBox| H | 4hrs|  | |
-| --- | --- |  --- | --- | --- |
-| More Stats for Pokemon - Code | M | 4hrs|  |  |
-| Show more photos of Pokemon| M | 4hrs| |  |
-| Extra CSS| M | 3hrs|  | |
+| Component | Priority | Estimated Time | Time Invested | 
+| --- | :---: |  :---: | :---: | 
+| HTML| M | 2hrs| 1.5hrs  |  
+| CSS - Basic | M | 3hrs| 2hrs | 
+| CSS - Advanced | H | 3.5 hrs | 4.5hrs |  
+| Psuedocode| M | 2hrs| .5hrs |  
+| Functional Coding | H | 3hrs| 3.5hrs |  
+| Working with API | H | 4.5hrs| 3hrs | 
+| FlexBox| H | 4hrs| 3.5hrs | 
+| --- | --- |  --- | --- |
+| More Stats for Pokemon - Code | M | 4hrs| 4hrs |  
+| Show more photos of Pokemon| M | 4hrs| 2hrs |  
+| Extra CSS| M | 3hrs| 3hrs | 
 
 
-| Total | H | 33.0hrs|  |  |
+| Total | H | 33.0hrs| 27.5 |  
 
 ## Code Snippet
 
-<!-- Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
-
-```
-function reverse(string) {
-	// here is the code to reverse a string of text
+function getPokemonInfo(pokemon) {
+  let info = document.querySelector('#bottom')
+  const infoDiv = document.createElement('div')
+  infoDiv.innerHTML = pokemon.flavor_text_entries[1].language.name === "en" ? pokemon.flavor_text_entries[1].flavor_text : pokemon.flavor_text_entries[2].flavor_text
+  info.append(infoDiv)
 }
-``` -->
+
 
 ## Change Log
 
- <!-- Use this section to document what changes were made and the reasoning behind those changes.   -->
+const searchEnter = document.querySelector('#pokesearch')
+searchEnter.addEventListener("keyup", function (e){
+  if (e.keyCode === 13) {
+    e.preventDefault();
+    document.querySelector("#search").click();
+  }
+})

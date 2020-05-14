@@ -18,7 +18,6 @@
 
 
 #searchbox{
-  
   width: 90%;
   border-radius: 15px;
   border: 1px solid black;
@@ -26,7 +25,6 @@
   padding: 7px;
   margin-bottom: 10px;
   box-shadow: 8px 8px rgba(192, 205, 236, 0.9);
-  
 }
 
 #triangle{
@@ -48,7 +46,6 @@
   width: 65%;
   box-shadow: 8px 8px rgba(192, 205, 236, 0.9);
   font-family: 'Anton', sans-serif;
-  
 }
 
 #type{
@@ -104,7 +101,6 @@
   position: absolute;
   bottom: 3%;
   width: 95%;
-  
 }
 
 #namebar{
@@ -151,10 +147,8 @@ span{
 }
 
 body{
-  background-image: url("https://s3.amazonaws.com/mk-website-media/wp-content/uploads/2018/10/19001752/Wallpaper-IngridMika-ContactGrid55-1.jpg");
- 
+  background: url("https://s3.amazonaws.com/mk-website-media/wp-content/uploads/2018/10/19001752/Wallpaper-IngridMika-ContactGrid55-1.jpg");
 }
-
 
 #pokeimage{
   width: 25%;
@@ -172,7 +166,6 @@ body{
 #pokesearch{
   border-radius: 5px;
   width:55%;
-  /* width: 60%; */
 }
 
 #images{
@@ -198,10 +191,6 @@ button{
   vertical-align: middle;  
 }
 
-
-
-
-
 @font-face {
   font-family: 'pocket_monkregular';
   src: url('fonts/pocketmonk-15ze-webfont.woff2') format('woff2'),
@@ -209,4 +198,12 @@ button{
   font-weight: normal;
   font-style: normal;
 
+}
+
+@media (max-height: 700px) and (max-width: 1500px) {
+  #images{
+     display: flexbox;
+     padding-left: 10%;
+     flex-direction: row;
+  } 
 }
