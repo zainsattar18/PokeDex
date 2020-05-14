@@ -159,24 +159,37 @@ body{
 #pokeimage{
   width: 25%;
   height: 25%;
-  padding-left: 15%;
+  padding-left: 12%;
   margin-right: 0px;
 }
 
 #pokeimage_two{
   width: 15%;
   height: 15%;
-  padding: 5px;
+  padding-left: 15px;
 }
 
 #pokesearch{
   border-radius: 5px;
-  width:60%;
+  width:55%;
+  /* width: 60%; */
 }
 
 #images{
   display: flex;
   flex-direction: column;
+}
+
+#pokeimage:hover{
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+#pokeimage_two:hover{
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 button{
