@@ -200,10 +200,18 @@ button{
 
 }
 
-@media (max-height: 700px) and (max-width: 1500px) {
+
+@media (max-height: 550px) and (max-width: 1500px) {
   #images{
      display: flexbox;
      padding-left: 10%;
      flex-direction: row;
   } 
+
+}
+
+@media (max-height: 550px){
+  #bottom{
+    padding:10px
+  }
 }

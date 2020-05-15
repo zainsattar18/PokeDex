@@ -3,6 +3,8 @@
 
 Pokemon Pokedex Neptune 
 
+https://pages.git.generalassemb.ly/zainsattar18/Pokedex-Neptune-Navy/ 
+
 ## Project Description
 
 I am creating a Pokedex (Pokemon Index) which will allow the user to search for the first 150 Pokemon and get data that is specific for that Pokemon.  
@@ -46,17 +48,23 @@ https://wireframe.cc/pro/pp/5f208163a341797
 
 #### MVP 
 -Use an API to properly retrieve data from an external source.
+
 -Have a function Search/Drop down bar that retrieves a Pokemon when searched for.
+
 -Allow the user to search for a new Pokemon without having the data from the past search show up. 
+
 -Display two characteristics of the Pokemon (ex. Height, Weight, etc)
+
 -Show a photo of the search Pokemon 
 
 
 #### PostMVP  
 
 -Display more than two characteristics of a searched Pokemon. 
--Display the evolution cycle of a search Pokemon, if applicable.  
--Display a photo of both the front and back of search Pokemon 
+
+-Display the evolution cycle of a searched Pokemon, if applicable. 
+
+-Display a photo of both the front and back of searched Pokemon 
 
 ## Project Schedule
 
@@ -89,8 +97,6 @@ Include a full list of features that have been prioritized based on the `Time an
 | More Stats for Pokemon - Code | M | 4hrs| 4hrs |  
 | Show more photos of Pokemon| M | 4hrs| 2hrs |  
 | Extra CSS| M | 3hrs| 3hrs | 
-
-
 | Total | H | 33.0hrs| 27.5 |  
 
 ## Code Snippet
