@@ -14,9 +14,9 @@ I am creating a Pokedex (Pokemon Index) which will allow the user to search for 
 
 https://pokeapi.co/api/v2/pokemon
 
-{
+```{
 count: 964,
-next: "https://pokeapi.co/api/v2/pokemon?offset=150&limit=150",
+next: "https://pokeapi.co/api/v2/pokemon",
 previous: null,
 results: [
 {
@@ -41,6 +41,7 @@ url: "https://pokeapi.co/api/v2/pokemon/5/"
 }
 ]
 }
+```
 
 ## Wireframes
 
@@ -101,20 +102,35 @@ Include a full list of features that have been prioritized based on the `Time an
 
 ## Code Snippet
 
-function getPokemonInfo(pokemon) {
+```function getPokemonInfo(pokemon) {
   let info = document.querySelector('#bottom')
   const infoDiv = document.createElement('div')
   infoDiv.innerHTML = pokemon.flavor_text_entries[1].language.name === "en" ? pokemon.flavor_text_entries[1].flavor_text : pokemon.flavor_text_entries[2].flavor_text
   info.append(infoDiv)
 }
+```
 
 
 ## Change Log
 
-const searchEnter = document.querySelector('#pokesearch')
+
+```const searchEnter = document.querySelector('#pokesearch')
 searchEnter.addEventListener("keyup", function (e){
   if (e.keyCode === 13) {
     e.preventDefault();
     document.querySelector("#search").click();
   }
 })
+```
+>Decided to add in an eventListner to add allow users to use the "enter' key on both mobile & computer so they do not need to only click the button to make searching a bit easier. 
+
+```function getPokemonInfo(pokemon) {
+  let info = document.querySelector('#bottom')
+  const infoDiv = document.createElement('div')
+  infoDiv.innerHTML = pokemon.flavor_text_entries[1].language.name === "en" ? pokemon.flavor_text_entries[1].flavor_text : pokemon.flavor_text_entries[2].flavor_text
+  info.append(infoDiv)
+}
+```
+>Decided to change the Pokemon evolution Post-MVP to bring up a little blurb about the pokemon in the bottom portion of the page. Had to include a 2nd endpoint to get the necessary infomation. 
+
+> Instead of just allowing the first 150 Pokemon. I was able to grab data for all Pokemon (over 650)
