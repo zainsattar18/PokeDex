@@ -102,7 +102,8 @@ Include a full list of features that have been prioritized based on the `Time an
 
 ## Code Snippet
 
-```function getPokemonInfo(pokemon) {
+```
+function getPokemonInfo(pokemon) {
   let info = document.querySelector('#bottom')
   const infoDiv = document.createElement('div')
   infoDiv.innerHTML = pokemon.flavor_text_entries[1].language.name === "en" ? pokemon.flavor_text_entries[1].flavor_text : pokemon.flavor_text_entries[2].flavor_text
@@ -114,7 +115,8 @@ Include a full list of features that have been prioritized based on the `Time an
 ## Change Log
 
 
-```const searchEnter = document.querySelector('#pokesearch')
+```
+const searchEnter = document.querySelector('#pokesearch')
 searchEnter.addEventListener("keyup", function (e){
   if (e.keyCode === 13) {
     e.preventDefault();
@@ -124,7 +126,8 @@ searchEnter.addEventListener("keyup", function (e){
 ```
 >Decided to add in an eventListner to add allow users to use the "enter' key on both mobile & computer so they do not need to only click the button to make searching a bit easier. 
 
-```function getPokemonInfo(pokemon) {
+```
+function getPokemonInfo(pokemon) {
   let info = document.querySelector('#bottom')
   const infoDiv = document.createElement('div')
   infoDiv.innerHTML = pokemon.flavor_text_entries[1].language.name === "en" ? pokemon.flavor_text_entries[1].flavor_text : pokemon.flavor_text_entries[2].flavor_text
