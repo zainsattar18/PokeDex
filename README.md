@@ -4,6 +4,7 @@
 Pokemon Pokedex Neptune 
 
 https://pages.git.generalassemb.ly/zainsattar18/Pokedex-Neptune-Navy/ 
+https://pokedex-p1.netlify.app/
 
 ## Project Description
 
