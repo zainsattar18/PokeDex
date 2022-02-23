@@ -13,7 +13,63 @@
     // load Branch
     (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking".split(" "), 0);
     // init Branch
-    branch.init('key_live_oh6Nm1MwPBFpUhBNmhWOjckgszbBDQ5M');
+    branch.init('key_live_oh6Nm1MwPBFpUhBNmhWOjckgszbBDQ5M',function(err, data) {
+  });
+
+  branch.setBranchViewData({
+    data: {
+      "log_in": "1"
+    }
+  });
+  var thisListener = function(event, data) { 
+      window.journeyData = data;
+      console.log("event " + JSON.stringify(event));
+      console.log("data " + JSON.stringify(data));
+      // sendData(event, data);
+  }
+
+  function sendData (event, data) {
+    // var journey_variation = data.journey_link_data.tags;
+    // var journey_id = data.journey_link_data.journey_id;
+    // var journey_name = data.journey_link_data.journey_name;
+    // // var userId = dataLayer.userId;
+    // var classpass_id = "FOO" //REPLACE "FOO" WITH YOUR ID
+
+    // console.log(journey_variation, journey_id, journey_name);
+
+    // var custom_data = {
+    //   "variation": journey_variation,
+    //   "journey_id": journey_id,
+    //   "journey_name": journey_name,
+    //   "classpass_id": classpass_id
+    // }
+    branch.logEvent(
+      "homepage_view",
+      //custom_data,
+      function(err) { console.log(err);}
+    );
+  };
+
+  function showJourney () {
+    console.log("showing");
+    branch.init('key_live_oh6Nm1MwPBFpUhBNmhWOjckgszbBDQ5M', function(err, data) {
+      branch.closeJourney(
+        function(err) { 
+          branch.track('pageview', null, {'branch_view_id': '411594526336324610'});
+          console.log(err); 
+        }
+      );
+      
+    });
+  };
+  function setTheIdentity () {
+    console.log("setting the identity");
+    // var timestamp = Math.round(+new Date()/1000);
+    // var id = timestamp.toString();
+    branch.setIdentity("suuid", function (err, data) {
+      console.log(err, data);
+    });
+  };
   </script>
 </head>
 
